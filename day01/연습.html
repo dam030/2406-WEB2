@@ -4,112 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>연습</title>
-    <style>
-        header {
-            width: 1000px;
-            height: 100px;
-            border: 2px solid #222;
-            margin-bottom: 5px
-
-            display: flex;
-        }
-
-        .contents-1 {
-            display: flex;
-            background-color: yellow;
-        }
-        .contents-2 {
-            display: flex;
-            background-color: orange;
-        }
-
-
-        p{
-            margin: 5px;
-        }
-
-
-        .container{
-            width: 1000px;
-            display: flex;
-        }
-
-        main{
-            width: 800px;
-            height: 100%;
-            margin-right: 5px;
-        }
-        .main-box{
-            width: 700px;
-            height: 100%;
-            border: 2px solid #222;
-            margin-bottom: 5px;
-        }
-
-        aside{
-            width: 100%;
-            height: 100%;
-            border: 2px solid #222;
-        }
-        .box{
-            background-color: gray;
-            margin: 10px;
-        }
-
-
-        footer{
-            width: 1000px;
-            height: 50px;
-            border: 2px solid #222;
-
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 15px;
-        }
-    </style>
+    <link rel="stylesheet" href="../reset.css">
+    <link rel="stylesheet" href="../day01/연습.css">
 </head>
 <body>
     <header>
-        <div>
-            <h1>WEB-logo</h1>
-        </div>
-        <div class="header-contents">
-            <div class="contents-1">
-                <p>menu-1</p>
-                <p>menu-1</p>
-                <p>menu-1</p>
-                <p>menu-1</p>
-            </div>
-            <div class="contents-2">
-                <p>menu-2</p>
-                <p>menu-2</p>
-                <p>menu-2</p>
-                <p>menu-2</p>
-            </div>
-        </div>
+        <h1>WEB-logo</h1>
+        <nav>
+            <ul class="menu-container-1">
+                <li class="menu-container-1"><a href="">menu-1</li>
+                <li class="menu-container-1"><a href="">menu-1</li>
+                <li class="menu-container-1"><a href="">menu-1</li>
+                <li class="menu-container-1"><a href="">menu-1</li>
+            </ul>
+            <ul class="menu-container-2">
+                <li class="menu-container-2"><a href="">menu-2</li>
+                <li class="menu-container-2"><a href="">menu-2</li>
+                <li class="menu-container-2"><a href="">menu-2</li>
+                <li class="menu-container-2"><a href="">menu-2</li>
+            </ul>
+        </nav>
     </header>
-    <div class="container">
+    <div class="wrap">
         <main>
-            <div class="main-box">
-                <h3>Main Article</h3>
-                <p>ColorZilla gor Google is an extension thatassists web</p>
-            </div>
-            <div class="main-box">
-                <h3>Main Article</h3>
-                <p>ColorZilla gor Google is an extension thatassists web</p>
-            </div>
-            <div class="main-box">
-                <h3>Main Article</h3>
-                <p>ColorZilla gor Google is an extension thatassists web</p>
-            </div>
+            <article>
+                <h2>Main Article</h2>
+                <p>ColorZilla for Google Chrome is an extension that assists web developer and graphic disigners with color related tasks - both basic and advanced. ColorZilla includes a Color picker, eye Dropper, Gradient Generator and many additional advanced color tools.</p>
+            </article>
+            <article>
+                <h2>Main Article</h2>
+                <p>ColorZilla for Google Chrome is an extension that assists web developer and graphic disigners with color related tasks - both basic and advanced. ColorZilla includes a Color picker, eye Dropper, Gradient Generator and many additional advanced color tools.</p>
+            </article>
+            <article>
+                <h2>Main Article</h2>
+                <p>ColorZilla for Google Chrome is an extension that assists web developer and graphic disigners with color related tasks - both basic and advanced. ColorZilla includes a Color picker, eye Dropper, Gradient Generator and many additional advanced color tools.</p>
+            </article>
         </main>
         <aside>
-            <h3>Right aside</h3>
-            <p>ColorZilla gor Google is an extension thatassists web</p>
+            <h2>Right aside</h2>
+            <p>ColorZilla for Google Chrome is an extension that assists web developer and graphic disigners with color related tasks - both basic and advanced.</p>
+            <input type="text" name="" id="">
             <button>mailto</button>
-            <div class="box">
-                <h4>TEXT</h4>
+            <div class="aside-inner-box">
+                <h3>TEXT</h3>
                 <p>banner</p>
             </div>
         </aside>
