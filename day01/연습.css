@@ -1,67 +1,120 @@
-    header{
-        width: 1000px;
-        height: 100px;
-        border: 2px solid #222;
-    
-        margin-bottom: 10px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-        .menu-container-1{
-        background-color: yellow;
-        display: flex;
-        margin: 5px;
-    }
-    .menu-container-2{
-        background-color: orange;
-        display: flex;
-        margin: 5px;
-        }
-    
-    
-    .wrap{
-        width: 1000px;
-        display: flex;
-    }
-    main{
-    
-    }
-    article{
-        border: 2px solid #222;
-        margin-bottom: 10px;
-    }
-    
-    aside{
-        width: 500px;
-        height: 0%;
-        border: 2px solid #222;
-    }
-    .aside-inner-box{
-        background-color: gray;
-    }
-    
-    
-    footer{
-        width: 1000px;
-        height: 50px;
-        border: 2px solid #222;
-        margin-top: 10px;
-    
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+/* 내가 해서 틀린 건 주석처리 */
 
-h1{
+header {
+    width: 1000px;
+    height: 100px;
+    border: 2px solid #222;
+    
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; 이건 없어도 자동으로 정렬 됨*/
+    margin: 0 auto;
+    margin-bottom: 10px;
+
+    box-sizing: border-box;
+}
+
+h1 {
     font-size: 30px;
-    font-weight: bolder;
+    font-weight: bold;
+    background-color: yellow;
+
+    width: 200px;
+    /* height: 100%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-h2{
+
+nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: palegoldenrod;
+}
+.menu-container {
+    display: flex;
+    background-color: yellow;
+}
+.menu-container:last-child {
+    background-color: orange;
+}
+.menu-cotent > a {
+    display: block;
+    padding: 8px 8px;
+    text-decoration: none;
+    color: #222;
+}
+    
+    
+.wrap {
+    width: 1000px;
+    gap: 10px;
+    display: flex;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    
+    /* 
+    기본적으로 flex에게 align-items: stretch; 속성이 부여되어있기 때문에
+    컨텐츠가 자동으로 크기를 맞추려고 함
+    */
+    align-items: flex-start;
+}
+.wrap h2 {
     font-size: 25px;
-    font-weight: bolder;
+    font-weight: bold;
 }
-h3{
+.wrap h3 {
     font-size: 20px;
-    font-weight: bolder;
+    font-weight: bold;
+}
+.wrap p {
+    font-size: 14px;
+    line-height: 25px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+article {
+    border: 2px solid #222;
+    padding: 15px;
+}
+article>h2 {
+    background-color: palegoldenrod;
+    margin-bottom: 5px;
+}
+    
+aside {
+    width: 240px;
+    flex-shrink: 0;
+    border: 2px solid #222;
+    padding: 15px;
+    /* height: 100%; */
+}
+aside>h2 {
+    margin-bottom: 10px;
+}
+.aside-inner-box {
+    background-color: gray;
+    margin-top: 10px;
+}
+    
+    
+footer {
+    width: 1000px;
+    border: 2px solid #222;
+    box-sizing: border-box;
+    background-color: palegoldenrod;
+    
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    text-align: center;
+    padding: 10px;
+
+    margin: 0 auto;
+    /* margin-top: 10px; */
 }
