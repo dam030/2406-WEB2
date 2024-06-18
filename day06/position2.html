@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../reset.css">
+    <style>
+        body {
+            height: 5000px;
+        }
+
+        header {
+            height: 80px;
+            background-color: coral;
+            padding: 0 32px;
+
+            width: 100%;
+            box-sizing: border-box;
+            /*
+            포지션 fixed를 주면 기본 속성이 무시되기 때문에 
+            width를 따로 주어야 함
+            이 때 패딩을 따로 주었기 때문에 박스 사이징으로
+            박스 영역도 추가 해 줘야 원래 속성대로 나옴
+            */
+
+            position: fixed;
+            /* fixed는 브라우저 기준(내가 보는 시점)으로 결정 됨 */
+            top: 0;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
+        }
+
+        nav {
+            background-color: gray;
+            height: 16px;
+            width: 800px;
+        }
+        
+        .icons {
+            background-color: gray;
+            height: 48px;
+            width: 200px;
+        }
+
+        .container {
+            height: 500px;
+
+            /* 헤더 여백을 만들어주는 공식. magin-top은 구조가 복잡하면 문제가 생길 위험이 있다 */
+            padding-top: 80px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>logo</h1>
+            <nav>
+
+            </nav>
+            <div class="icons">
+
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+
+    </div>
+</body>
+</html>
