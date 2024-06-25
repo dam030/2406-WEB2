@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../reset.css">
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: rgb(255, 39, 111);
+
+            transition: 1s;
+            /* transition-duration: 0.5s; 같은 동작 */
+
+            transition-property: width,height;
+            /* property: 트랜지션을 어느 속성에 적용할 것인지 직접 설정 */
+            transition-duration: 0.5s,0.5s;
+            /* duration: 트랜지션 지속시간 */
+            transition-timing-function: ease,ease;
+            /* timing-function: 트랜지션을 재생할 가속도 함수(기본 값은 ease) */
+            transition-delay: 0x,0.5x
+            /* delay: 트랜지션 재생까지 지연시킬 시간 */
+        }
+
+        .box:hover {
+            width: 300px;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>
