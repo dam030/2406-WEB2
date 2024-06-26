@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>예제</title>
+    <link rel="stylesheet" href="../reset.css">
+    <style>
+        body {
+            background-color: #222;
+        }
+
+        .pack-man {
+            transition: 0.2s;
+            width: 100px;
+            height: 100px;
+        }
+
+        .pack-rotate {
+            transition: 0.2s;
+        }
+
+        .m {
+            display: block;
+            width: 100px;
+            height: 50px;
+            background-color: white;
+        }
+
+        .top-m {
+            border-top-left-radius: 50px;
+            border-top-right-radius: 50px;
+
+            transform-origin: bottom;
+            animation: bite-up 0.2s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            /* animation: bite-up infinite alternate linear 0.2s; */
+
+            
+        }
+
+        .eye {
+            width: 10px;
+            height: 10px;
+            border-radius: 10px;
+            background-color: #222;
+
+        }
+        
+        .bot-m {
+            border-bottom-left-radius: 50px;
+            border-bottom-right-radius: 50px;
+            
+            transform-origin: top;
+            animation: bite-down 0.2s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            }
+
+        @keyframes bite-up {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(30deg);
+            }
+        }
+
+        @keyframes bite-down {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(-30deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="pack-man">
+        <div class="pack-rotate">
+            <span class="m top-m">
+                <div class="eye"></div>
+            </span>
+            <span class="m bot-m"></span>
+        </div>
+    </div>
+
+    <script>
+
+        const packMan = document.querySelector('.pack-man');
+        const packPos = {
+            x:0,
+            y:0
+        }
+        let packVector = 0;
+        let packPreVector = 0;
+
+        window.addEventListener('keydown', (e) => {
+            switch(e.key) {
+                case 'ArrowRight' :
+                    packPos.x += 100
+                    packVector=180;
+                    break;
+                case 'ArrowLeft' : 
+                    packPos.x -= 100
+                    packVector=0;
+                    break;
+                case 'ArrowUp' : 
+                    packPos.y -= 100
+                    packVector=90;
+                    break;
+                case 'ArrowDown' : 
+                    packPos.y += 100
+                    packVector=270;
+                    break;
+
+                    
+                }
+                if(packPreVector===270 && packVector ===0) {
+                    packMan.children[0].style.transition = '0s'
+                    packMan.children[0].style.transform = `rotate(${-90}deg)`
+                }else if(packPreVector === 0 && packVector===270) {
+                    packMan.children[0].style.transition = '0s'
+                    packMan.children[0].style.transform = `rotate(${360}deg)`
+                }
+                setTimeout(() => {
+                    packMan.children[0].style.transition = '0.2s'
+                    packMan.style.transform = `translate(${packPos.x}px,${packPos.y}px)`
+                    packMan.children[0].style.transform = `rotate(${packVector}deg)`
+                    packPreVector = packVector;
+                }, 1);
+            
+        })
+    </script>
+</body>
+</html>
