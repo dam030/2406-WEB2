@@ -86,11 +86,10 @@
         }
 
         .line {
+            position: absolute;
             width: 20px;
             height: 100%;
             background-color: red;
-
-            position: absolute;
         }
 
         .line:nth-child(1) {
@@ -101,9 +100,11 @@
             height: 20px;
             width: 30px;
 
+            position: absolute;
             top: 50%;
             left: 50%;
-            transform: translate(-50%,-50%);
+            transform: translate(-50%, -50%);
+            
             animation: line-2 alternate infinite 1s;
             }
             
@@ -124,11 +125,19 @@
         @keyframes line-2 {
             
             0% {
-                transform: scaleX(0);
+                transform: translate(-100,0);
+                left: -0;
+                opacity: 0;
             }
 
             50% {
-                transform: translate(-50,0) scaleX(1.5);
+                transform: translate(-50,0);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translate(-50,0);
+                opacity: 1;
             }
         }
 
