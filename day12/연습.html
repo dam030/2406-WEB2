@@ -90,13 +90,53 @@
             height: 100%;
             background-color: red;
 
-            display: flex;
-            align-items: center;
+            position: absolute;
+        }
+
+        .line:nth-child(1) {
+            animation: line-1 alternate infinite 1s;
         }
 
         .line:nth-child(2) {
             height: 20px;
             width: 30px;
+
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            animation: line-2 alternate infinite 1s;
+            }
+            
+        .line:nth-child(3) {
+            left: 100%;
+            transform: translate(-100%,0);
+            animation: line-3 alternate infinite 1s;
+        }
+
+        @keyframes line-1 {
+            
+            0% {
+                height: 0;
+            }
+            
+        }
+
+        @keyframes line-2 {
+            
+            0% {
+                transform: scaleX(0);
+            }
+
+            50% {
+                transform: translate(-50,0) scaleX(1.5);
+            }
+        }
+
+        @keyframes line-3 {
+            
+            0% {
+                height: 0;
+            }
         }
     </style>
     <style class="ani-box3">
