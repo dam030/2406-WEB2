@@ -6,6 +6,9 @@
     <title>밴드 페이지</title>
     <link rel="stylesheet" href="../reset.css">
     <style>
+        body {
+            background-color: #FCFCFC;
+        }
         header {
             width: 100%;
             height: 100px;
@@ -45,32 +48,45 @@
             flex-shrink: 0;
         }
 
-        .login>:nth-child(n) {
+        .h-login {
             display: block;
+        }
+
+        .login {
             width: 100px;
             height: 50px;
             background-color: #21c531;
-
             display: flex;
             margin: 10px;
             box-sizing: border-box;
             justify-content: center;
             align-items: center;
+            color: white;
         }
 
-        .login>:nth-child(1) {
+        .new-login {
+            width: 100px;
+            height: 50px;
             background-color: white;
+            display: flex;
+            margin: 10px;
+            box-sizing: border-box;
+            justify-content: center;
+            align-items: center;
+            color: #222;
         }
 
         .wap {
-            display: flex;
+            width: 100%;
         }
 
         .main-container {
+            width: 1000px;
             display: flex;
             justify-content: center;
             align-items: center;
             gap: 50px;
+            margin: 0 auto;
             margin-top: 50px;
         }
 
@@ -78,13 +94,132 @@
             height: 700px;
         }
 
-        .main-contents {
-
+        .m-box {
+            margin-bottom: 20px;
         }
 
-        .m-contents > h1 {
+        .m-box > h1 {
             font-size: 48px;
-            margin-bottom: 5px;
+            margin-bottom: 20px;
+            line-height: 60px;
+        }
+
+        .m-login {
+            margin-bottom: 30px;
+        }
+
+        .m-login > a {
+            width: 300px;
+        }
+
+        .m-login > .new-login {
+            border: 1px solid rgb(218, 218, 218);
+            border-radius: 5px;
+        }
+
+        .m-guide {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .guide-text {
+            display: flex;
+            font-size: 14px;
+        }
+
+        .guide-text > p {
+            color: #727272;
+            margin-right: 20px;
+        }
+
+        .guide-text > a {
+            color: #21c531;
+            font-weight: bold;
+        }
+
+
+        .intro-container {
+            width: 100%;
+            display: flex;
+            margin-bottom: 50px;
+        }
+
+        .intro-text {
+            position: absolute;
+            color: white;
+            top: 120%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+
+        .intro-text>h2 {
+            font-size: 42px;
+            margin-bottom: 30px;
+        }
+
+        .intro-text>p {
+            font-size: 16px;
+            line-height: 24px;
+            text-align: center;
+        }
+
+        .intro-contents {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            margin-bottom: 50px;
+        }
+
+        .i-contents {
+            
+        }
+
+        .i-content-img > img {
+            width: 300px;
+            margin-bottom: 20px;
+        }
+
+        .main-text {
+            font-size: 24px;
+            color: #222;
+            margin-bottom: 10px;
+        }
+
+        .i-contents-text:nth-child(2) {
+            color: #727272;
+            line-height: 20px;
+        }
+
+        .recommend-area {
+            width: 100%;
+            background-color: #f5f6f8;
+        }
+
+        .r-header {
+            width: 100%;
+            height: 50px;
+
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .r-container > ul > li {
+            display: flex;
+            justify-content:  space-between;
+            gap: 30px;
+        }
+
+        .r-contents {
+            width: 500px;
+            margin-bottom: 30px;
+        }
+
+        .r-contents>img {
+            width: 100px;
+            height: 100px;
+            border-radius: 10px;
         }
     </style>
 </head>
@@ -100,7 +235,7 @@
                 <div class="lan">
                     <button role="textbox">한국어</button>
                 </div>
-                <div class="login">
+                <div class="h-login">
                     <a href="#" role="button" class="new-login">회원가입</a>
                     <a href="#" role="button" class="login">로그인</a>
                 </div>
@@ -115,9 +250,11 @@
                 </span>
                 <div class="main-contents">
                     <div class="m-contents">
-                        <h1>모임이 쉬워진다!<br>우리끼리 밴드</h1>
-                        <p>당신의 모임도 BAND로 시작하세요</p>
-                        <div class="login">
+                        <div class="m-box">
+                            <h1>모임이 쉬워진다!<br>우리끼리 밴드</h1>
+                            <p>당신의 모임도 BAND로 시작하세요</p>
+                        </div>
+                        <div class="m-login">
                             <a href="#" role="button" class="login">로그인</a>
                             <a href="#" role="button" class="new-login">회원가입</a>
                         </div>
@@ -143,100 +280,112 @@
                     <div class="intro-container-img">
                         <img src="../day15/img/bg_intro.jpg" alt="">
                     </div>
-                    <h2>모임을 위한 공간, 밴드</h2>
-                    <p>밴드는 그룹 멤버와 함꼐하는 공간입니다.<br>동호회, 스터디, 주제별 모임을 밴드로 시작하세요<div class=""></div></p>
+                    <div class="intro-text">
+                        <h2>모임을 위한 공간, 밴드</h2>
+                        <p>밴드는 그룹 멤버와 함꼐하는 공간입니다.<br>동호회, 스터디, 주제별 모임을 밴드로 시작하세요<div class=""></div></p>
+                    </div>
                 </div>
                 <div class="intro-contents">
                     <div class="i-contents">
                         <div class="i-content-img">
                             <img src="../day15/img/img_seo01.jpg" alt="">
                         </div>
-                        <img src="" alt="">
-                        <p class="main-text">어떤 모임이라도!</p>
-                        <p>친구, 가족, 동료 등 함께 하고 싶은 사람과<br>우리만의 공간을 만들어보세요.</p>
+                        <div class="i-contents-text">
+                            <p class="main-text">어떤 모임이라도!</p>
+                            <p>친구, 가족, 동료 등 함께 하고 싶은 사람과<br>우리만의 공간을 만들어보세요.</p>
+                        </div>
                     </div>
                     <div class="i-contents">
                         <div class="i-content-img">
                             <img src="../day15/img/img_seo02.jpg" alt="">
                         </div>
-                        <img src="" alt="">
-                        <p class="main-text">모임에 딱 맞는 기능들</p>
-                        <p>투표로 의견을 모으고, 함께 일정을 공유하며<br>게시판과 앨범에는 추억을 쌓아보세요.</p>
+                        <div class="i-contents-text">
+                            <p class="main-text">모임에 딱 맞는 기능들</p>
+                            <p>투표로 의견을 모으고, 함께 일정을 공유하며<br>게시판과 앨범에는 추억을 쌓아보세요.</p>
+                        </div>
                     </div>
                     <div class="i-contents">
                         <div class="i-content-img">
                             <img src="../day15/img/img_seo03.jpg" alt="">
                         </div>
-                        <img src="" alt="">
-                        <p class="main-text">내가 원하는 모임 찾기</p>
-                        <p>취미, 스포츠, 또래 모임 등<br>나와 같은 관심사 밴드를 찾을 수 있어요.</p>
+                        <div class="i-contents-text">
+                            <p class="main-text">내가 원하는 모임 찾기</p>
+                            <p>취미, 스포츠, 또래 모임 등<br>나와 같은 관심사 밴드를 찾을 수 있어요.</p>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="recommend-area">
-                <div class="r-text">
-                    <p class="main-text">이런 밴드는 어때요</p>
+                <div class="r-header">
+                    <div class="r-text">
+                        <p class="main-text">이런 밴드는 어때요</p>
+                    </div>
+                    <div class="r-all">
+                        <a href="#">모두보기</a>
+                    </div>
                 </div>
                 <div class="r-container">
                     <ul>
                         <li>
-                            <div class="r-contents">
-                                <img src="../day15/img/자기계발.jpg" alt="">
-                                <p class="r-maintext">지속가능한 고독의 기술: The Art of Self-Recharging Po</p>
-                                <p class="basetext">인간 현존재는 혼자 있기를 힘들어 합니다. 그러나 외로움을 피하는</p>
-                                <p>멤버 893· 리더 피터펜✏ Peter Pen✒</p>
-                                <a href="#" role="button">
-                                    <p>자기계발</p>
-                                    <p>밴드 더보기</p>
-                                </a>
+                            <div class="r-contents-area">
+                                <div class="r-contents">
+                                    <img src="../day15/img/자기계발.jpg" alt="">
+                                    <p class="r-maintext">지속가능한 고독의 기술: The Art of Self-Recharging Po…</p>
+                                    <p class="basetext">인간 현존재는 혼자 있기를 힘들어 합니다. 그러나 외로움을 피…</p>
+                                    <p>멤버 893· 리더 피터펜✏ Peter Pen✒</p>
+                                    <a href="#" role="button">
+                                        <p>자기계발</p>
+                                        <p>밴드 더보기</p>
+                                    </a>
+                                </div>
+                                <div class="r-contents">
+                                    <img src="../day15/img/철새.jpg" alt="">
+                                    <p class="r-maintext">철새탐사 동호회</p>
+                                    <p class="basetext">철새탐사를 통하여 자연사랑을 배우는 동호회 새를 사랑하는…</p>
+                                    <p>맴버 1,206· 리더 새똥구리(최한수) </p>
+                                    <a href="#" role="button">
+                                        <p>철새탐사</p>
+                                        <p>밴드 더보기</p>
+                                    </a>
+                                </div>
+                                <div class="r-contents">
+                                    <img src="../day15/img/아틀리에.jpg" alt="">
+                                    <p class="r-maintext">아틀리에아쿠아 (베타.구피.안시.부세.나나.활착품)</p>
+                                    <p class="basetext">구피.안시.베타.새우.코리.수초등등! 물생활관련 글.소통.환영합…</p>
+                                    <p>맴버 587· 리더 쵸코네티/포항/87 </p>
+                                </div>
+                                <div class="r-contents">
+                                    <img src="../day15/img/거북이.jpg" alt="">
+                                    <p class="r-maintext">거북이 공원</p>
+                                    <p class="basetext">육지 거북이 ,반수생 거북이를 키우시거나 관심있으신분들 많…</p>
+                                    <p>맴버 839· 리더 거북이 집사 </p>
+                                    <a href="#" role="button">
+                                        <p>육지 거북이</p>
+                                        <p>밴드 더보기</p>
+                                    </a>
+                                </div>
+                                <div class="r-contents">
+                                    <img src="../day15/img/kbs시사.jpg" alt="">
+                                    <p class="r-maintext">공식 밴드 KBS 시사클럽</p>
+                                    <p class="basetext">당신의 하루, 대한민국의 오늘 KBS 뉴스​</p>
+                                    <p>맴버 45,662· 리더 KBS 시사클럽 </p>
+                                    <a href="#" role="button">
+                                        <p>뉴스</p>
+                                        <p>밴드 더보기</p>
+                                    </a>
+                                </div>
                             </div>
-                            <div class="r-contents">
-                                <img src="../day15/img/철새.jpg" alt="">
-                                <p class="r-maintext">철새탐사 동호회</p>
-                                <p class="basetext">철새탐사를 통하여 자연사랑을 배우는 동호회 새를 사랑하는 모임</p>
-                                <p>맴버 1,206· 리더 새똥구리(최한수) </p>
-                                <a href="#" role="button">
-                                    <p>철새탐사</p>
-                                    <p>밴드 더보기</p>
-                                </a>
-                            </div>
-                            <div class="r-contents">
-                                <img src="../day15/img/아틀리에.jpg" alt="">
-                                <p class="r-maintext">아틀리에아쿠아 (베타.구피.안시.부세.나나.활착품)</p>
-                                <p class="basetext">구피.안시.베타.새우.코리.수초등등! 물생활관련 글.소통.환영합니다~^</p>
-                                <p>맴버 587· 리더 쵸코네티/포항/87 </p>
-                            </div>
-                            <div class="r-contents">
-                                <img src="../day15/img/거북이.jpg" alt="">
-                                <p class="r-maintext">거북이 공원</p>
-                                <p class="basetext">육지 거북이 ,반수생 거북이를 키우시거나 관심있으신분들 많이 많이 들어와주세요</p>
-                                <p>맴버 839· 리더 거북이 집사 </p>
-                                <a href="#" role="button">
-                                    <p>육지 거북이</p>
-                                    <p>밴드 더보기</p>
-                                </a>
-                            </div>
-                            <div class="r-contents">
-                                <img src="../day15/img/kbs시사.jpg" alt="">
-                                <p class="r-maintext">공식 밴드 KBS 시사클럽</p>
-                                <p class="basetext">당신의 하루, 대한민국의 오늘 KBS 뉴스​</p>
-                                <p>맴버 45,662· 리더 KBS 시사클럽 </p>
-                                <a href="#" role="button">
-                                    <p>뉴스</p>
-                                    <p>밴드 더보기</p>
-                                </a>
-                            </div>
-                            <div class="r-contents">
-                                <img src="../day15/img/nc.jpg" alt="">
-                                <p class="r-maintext">NC 다이노스 팬밴드</p>
-                                <p class="basetext">9번째 심장 NC다이노스 팬밴드에 오신것을 환영합니다~~^^
-                                    프로필 이름이나 닉네임 옆에 출생년도와 거주지역 기재하시고 질문에 답하셔야 가입승인됩니다</p>
-                                <p>맴버 11,648· 리더 이다겸/71/창원 </p>
-                                <a href="#" role="button">
-                                    <p>NC 다이노스</p>
-                                    <p>밴드 더보기</p>
-                                </a>
-                            </div>
+                            <div class="r-contents-area">
+                                <div class="r-contents">
+                                    <img src="../day15/img/nc.jpg" alt="">
+                                    <p class="r-maintext">NC 다이노스 팬밴드</p>
+                                    <p class="basetext">9번째 심장 NC다이노스 팬밴드에 오신것을 환영합니다~~^^ …</p>
+                                        <p>맴버 11,648· 리더 이다겸/71/창원 </p>
+                                    <a href="#" role="button">
+                                        <p>NC 다이노스</p>
+                                        <p>밴드 더보기</p>
+                                    </a>
+                                </div>
                             <div class="r-contents">
                                 <img src="../day15/img/크로키.jpg" alt="">
                                 <p class="r-maintext">매일 크로키하기</p>
@@ -250,7 +399,7 @@
                             <div class="r-contents">
                                 <img src="../day15/img/영탁.jpg" alt="">
                                 <p class="r-maintext">❤가수영탁 팬밴드❤</p>
-                                <p class="basetext">미스터 트롯(선) 출신 영탁가수의 밴드 입니다 2007년 "사랑으로</p>
+                                <p class="basetext">미스터 트롯(선) 출신 영탁가수의 밴드 입니다 2007년 "사랑…</p>
                                 <p>맴버 2,725· 리더 리더 유재태(부산) </p>
                                 <a href="#" role="button">
                                     <p>영탁</p>
@@ -260,7 +409,7 @@
                             <div class="r-contents">
                                 <img src="../day15/img/산행.jpg" alt="">
                                 <p class="r-maintext">나홀로 산행기</p>
-                                <p class="basetext">여기서 일창으로 작업하시거나...그런분들 가차없이 강퇴조치합니다</p>
+                                <p class="basetext">여기서 일창으로 작업하시거나...그런분들 가차없이 강퇴조치…</p>
                                 <p>맴버 9,659· 리더 창민-의정부-77 </p>
                                 <a href="#" role="button">
                                     <p>산행</p>
@@ -270,13 +419,14 @@
                             <div class="r-contents">
                                 <img src="../day15/img/박효신.jpg" alt="">
                                 <p class="r-maintext">박효신 팬밴드</p>
-                                <p class="basetext">가수 박효신의 팬밴드입니다. 대한민국 최고의 가창력과 영혼을</p>
+                                <p class="basetext">가수 박효신의 팬밴드입니다. 대한민국 최고의 가창력과 영혼…</p>
                                 <p>맴버 1,086· 리더 효신짱신#운영자리더 </p>
                                 <a href="#" role="button">
                                     <p>팬밴드</p>
                                     <p>밴드 더보기</p>
                                 </a>
                             </div>
+                        </div>
                         </li>
                     </ul>
                 </div>
