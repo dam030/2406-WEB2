@@ -383,7 +383,7 @@ header {
 }
 
 .f-menu {
-    /* position: relative; */
+    position: relative;
 }
 
 .f-menu >  a {
