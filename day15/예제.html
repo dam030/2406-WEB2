@@ -10,21 +10,19 @@
 <body>
     <header>
         <div class="h-container">
-            <div>
+            <div class="h-logo">
                 <a href="#" class="logo-spr">
                     <span class="hide-text">band</span>
                 </a>
             </div>
             <div class="nav">
-                <select class="lan">
+                <select id="" class="lan">
                     <option value="">한국어</option>
                     <option value="">English</option>
                     <option value="">日本語</option>
                 </select>
-                <div class="h-login">
-                    <a href="#" role="button" class="new-login">회원가입</a>
-                    <a href="#" role="button" class="login">로그인</a>
-                </div>
+                <a href="#" role="button" class="new-login">회원가입</a>
+                <a href="#" role="button" class="login">로그인</a>
             </div>            
         </div>
     </header>
@@ -63,10 +61,7 @@
             </div>
             <div class="intro-area">
                 <div class="intro-container">
-                    <figure class="intro-container-img">
-                        <img src="../day15/img/bg_intro.jpg" alt="">
-                    </figure>
-                    <div class="intro-text">
+                    <div class="intro-box">
                         <h2>모임을 위한 공간, 밴드</h2>
                         <p>밴드는 그룹 멤버와 함꼐하는 공간입니다.<br>동호회, 스터디, 주제별 모임을 밴드로 시작하세요<div class=""></div></p>
                     </div>
@@ -101,165 +96,193 @@
                     </div>
                 </div>
             </div>
-            <div class="recommend-area">
-                <div class="r-header">
-                    <div class="r-text">
+            <section class="recommand-area">
+                <div class="recommand-container">
+                    <div class="r-header">
                         <p class="main-text">이런 밴드는 어때요</p>
-                    </div>
-                    <div class="r-all">
                         <a href="#">모두보기</a>
                     </div>
+                    <div class="r-box">
+                        <ul class="recommand">
+                            <li class="r-contents">
+                                <a href="#" class="unit-link"></a>
+                                <figure>
+                                    <img src="img/자기계발.jpg" alt="">
+                                </figure>
+                                <div class="r-contents-text">
+                                <p class="r-contents-main"><a href="#">지속가능한 고독의 기술: The Art of Self-Rechaging Power</a></p>
+                                <p>인간 현존재는 혼자 있기를 힘들어 합니다. 그러나 외로움을 피하려 무리속으로 들어가면 어쩌면 더 심한 불안과 소외만 되돌아 오는 것 같지 않나요? 내 본래적 삶의 정체성은 나만의 선택과 결단으로 매일 한발씩 앞으로 ...<sein und zeit>☆</p>
+                                    <p class="meta">
+                                        멤버 <span class="member-count">893</span> · 리더 <span class="leader">피터펜✏ Peter Pen✒</span>
+                                    </p>
+                                    <a href="" class="category-button"><span class="category"> 자기계발</span> 밴드 더보기</a>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class="recommand">
+                            <li class="r-contents">
+                                <a href="#" class="unit-link"></a>
+                                <figure>
+                                    <img src="img/nc.jpg" alt="">
+                                </figure>
+                                <div class="r-contents-text">
+                                    <p class="r-contents-main"><a href="#">NC 다이노스 팬밴드</a></p>
+                                    <p>9번째 심장 NC다이노스 팬밴드에 오신것을 환영합니다~~^^
+                                        프로필 이름이나 닉네임 옆에 출생년도와 거주지역 기재하시고 질문에 답하셔야 가입승인됩니다</p>
+                                        <p class="meta">
+                                            멤버 <span class="member-count">11,648</span> · 리더 <span class="leader">이다겸/71/창원</span>
+                                        </p>
+                                        <a href="" class="category-button"><span class="category">NC 다이노스</span> 밴드 더보기</a>
+                                    </div>
+                                </li>
+                        </ul>
+                        <ul class="recommand">
+                            <li class="r-contents">
+                                <a href="#" class="unit-link"></a>
+                                <figure>
+                                    <img src="img/철새.jpg" alt="">
+                                </figure>
+                                <div class="r-contents-text">
+                                    <p class="r-contents-main"><a href="#">철새탐사 동호회</a></p>
+                                    <p>철새탐사를 통하여 자연사랑을 배우는 동호회
+                                        새를 사랑하는 사람은 누구나 오세요.
+                                        탐조. 조류 촬영 모두 환영합니다.</p>
+                                        <p class="meta">
+                                            멤버 <span class="member-count">1,206 </span> · 리더 <span class="leader">새똥구리(최한수)</span>
+                                        </p>
+                                        <a href="" class="category-button"><span class="category">철새탐사</span> 밴드 더보기</a>
+                                    </div>
+                                </li>
+                        </ul>
+                        <ul class="recommand">
+                            <li class="r-contents">
+                                <a href="#" class="unit-link"></a>
+                                <figure>
+                                    <img src="img/크로키.jpg" alt="">
+                                </figure>
+                                <div class="r-contents-text">
+                                    <p class="r-contents-main"><a href="#">매일 크로키하기</a></p>
+                                    <p>매일 크로키</p>
+                                        <p class="meta">
+                                            멤버 <span class="member-count">559</span> · 리더 <span class="leader">먕</span>
+                                        </p>
+                                        <a href="" class="category-button"><span class="category">크로키 그림</span> 밴드 더보기</a>
+                                    </div>
+                                </li>
+                        </ul>
+                        <ul class="recommand">
+                            <li class="r-contents">
+                                <a href="#" class="unit-link"></a>
+                                <figure>
+                                    <img src="img/아틀리에.jpg" alt="">
+                                </figure>
+                                <div class="r-contents-text">
+                                    <p class="r-contents-main"><a href="#">아틀리에아쿠아 (베타.구피.안시.부세.나나.활착품)</a></p>
+                                    <p>구피.안시.베타.새우.코리.수초등등! 물생활관련 글.소통.환영합니다~^^</p>
+                                        <p class="meta">
+                                            멤버 <span class="member-count"> 589</span> · 리더 <span class="leader">쵸코네티/포항/87</span>
+                                        </p>
+                                        <!-- <a href="" class="category-button"><span class="category">카테고리</span> 밴드 더보기</a> -->
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class="recommand">
+                            <li class="r-contents">
+                                <a href="#" class="unit-link"></a>
+                                <figure>
+                                    <img src="img/영탁.jpg" alt="">
+                                </figure>
+                                <div class="r-contents-text">
+                                    <p class="r-contents-main"><a href="#">❤가수영탁 팬밴드❤</a></p>
+                                    <p>미스터 트롯(선) 출신 영탁가수의 밴드 입니다
+                                        2007년 "사랑한다" 로 정식 데뷔해
+                                        2020년 미스터트롯 출전하여 2위를 기록했고
+                                        어느덧 16년차 가수가 되었습니다
+                                        찐이야, 니가 왜 거기서 나와, 막걸리 한잔,
+                                        누나가 딱이야, 그리고 최근 이불 이라는 곡으로
+                                        최고의 인기를 누리고 있고 가수겸 작곡가로
+                                        활동을 하고 계십니다 이 공간에서 영탁 가수를
+                                        응원 해주시고 같이 정보도 공유하며 나날이 성장되어지는
+                                        영탁 가수를 지켜봐주시고 우리 모두 힘을 모아
+                                        오랫동안 최고의 가수가 되도록 응원해 보아요~
+                                        모든 밴드 회원님들 환영합니다~🤗💕</p>
+                                        <p class="meta">
+                                            멤버 <span class="member-count">2,739</span> · 리더 <span class="leader">리더 유재태(부산)</span>
+                                        </p>
+                                        <a href="" class="category-button"><span class="category">영탁</span> 밴드 더보기</a>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class="recommand">
+                            <li class="r-contents">
+                                <a href="#" class="unit-link"></a>
+                                <figure>
+                                    <img src="img/거북이.jpg" alt="">
+                                </figure>
+                                <div class="r-contents-text">
+                                    <p class="r-contents-main"><a href="#">거북이 공원</a></p>
+                                    <p>육지 거북이 ,반수생 거북이를 키우시거나 관심있으신분들 많이 많이 들어와주세요</p>
+                                        <p class="meta">
+                                            멤버 <span class="member-count">1,000</span> · 리더 <span class="leader">이름</span>
+                                        </p>
+                                        <a href="" class="category-button"><span class="category">육지 거북이</span> 밴드 더보기</a>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class="recommand">
+                            <li class="r-contents">
+                                <a href="#" class="unit-link"></a>
+                                <figure>
+                                    <img src="img/산행.jpg" alt="">
+                                </figure>
+                                <div class="r-contents-text">
+                                    <p class="r-contents-main"><a href="#">나홀로 산행기</a></p>
+                                    <p>여기서 일창으로 작업하시거나...그런분들 가차없이
+                                        강퇴조치합니다! 창피하게 망신 당하지 마시고
+                                        그냥 탈퇴하세요....저희 밴드는 조용히 산을 좋아하시는
+                                        분들의.공간입니다.</p>
+                                        <p class="meta">
+                                            멤버 <span class="member-count">9,671</span> · 리더 <span class="leader">창민-의정부-77</span>
+                                        </p>
+                                        <a href="" class="category-button"><span class="category">산행</span> 밴드 더보기</a>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class="recommand">
+                            <li class="r-contents">
+                                <a href="#" class="unit-link"></a>
+                                <figure>
+                                    <img src="img/kbs시사.jpg" alt="">
+                                </figure>
+                                <div class="r-contents-text">
+                                    <p class="r-contents-main"><a href="#">공식 밴드 KBS 시사클럽</a></p>
+                                    <p>당신의 하루, 대한민국의 오늘 KBS 뉴스</p>
+                                        <p class="meta">
+                                            멤버 <span class="member-count">45,672</span> · 리더 <span class="leader">KBS 시사클럽</span>
+                                        </p>
+                                        <a href="" class="category-button"><span class="category">뉴스​</span> 밴드 더보기</a>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class="recommand">
+                            <li class="r-contents">
+                                <a href="#" class="unit-link"></a>
+                                <figure>
+                                    <img src="img/박효신.jpg" alt="">
+                                </figure>
+                                <div class="r-contents-text">
+                                    <p class="r-contents-main"><a href="#">박효신 팬밴드</a></p>
+                                    <p>가수 박효신의 팬밴드입니다. 대한민국 최고의 가창력과 영혼을 울리는 보이스로 당신의 마음을 사로잡았다면 이제 많은 사람과 그를 소통하세요!</p>
+                                        <p class="meta">
+                                            멤버 <span class="member-count">1,087</span> · 리더 <span class="leader">효신짱신#운영자리더</span>
+                                        </p>
+                                        <a href="" class="category-button"><span class="category">팬밴드</span> 밴드 더보기</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="r-container">
-                    <ul>
-                        <li>
-                            <div class="r-contents-area">
-                                <div class="r-contents">
-                                    <figure class="r-container-img">
-                                        <img src="../day15/img/자기계발.jpg" alt="">
-                                    </figure>
-                                    <div class="r-text">
-                                        <p class="r-maintext">지속가능한 고독의 기술: The Art of Self-Recharging Po…</p>
-                                        <p class="basetext">인간 현존재는 혼자 있기를 힘들어 합니다. 그러나 외로움을 피…</p>
-                                        <p>멤버 <span>893</span>· 리더 </span>피터펜✏ Peter Pen✒</span></p>
-                                        <a href="#" role="button">
-                                            <p></span>자기계발</span> 밴드 더보기</p>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="r-contents">
-                                    <figure class="r-container-img">
-                                        <img src="../day15/img/철새.jpg" alt="">
-                                    </figure>
-                                    <div class="r-text">
-                                        <p class="r-maintext">철새탐사 동호회</p>
-                                        <p class="basetext">철새탐사를 통하여 자연사랑을 배우는 동호회 새를 사랑하는…</p>
-                                        <p>맴버 1,206· 리더 새똥구리(최한수) </p>
-                                        <a href="#" role="button">
-                                            <p class="recommend">철새탐사</p>
-                                            <p>밴드 더보기</p>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="r-contents">
-                                    <figure class="r-container-img">
-                                        <img src="../day15/img/아틀리에.jpg" alt="">
-                                    </figure>
-                                    <div class="r-text">
-                                        <p class="r-maintext">아틀리에아쿠아 (베타.구피.안시.부세.나나.활착품)</p>
-                                        <p class="basetext">구피.안시.베타.새우.코리.수초등등! 물생활관련 글.소통.환영합…</p>
-                                        <p>맴버 587· 리더 쵸코네티/포항/87 </p>
-                                        <a href="#" role="button" class="hide-contents">
-                                            <p class="recommend">관상어</p>
-                                            <p>밴드 더보기</p>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="r-contents">
-                                    <figure class="r-container-img">
-                                        <img src="../day15/img/거북이.jpg" alt="">
-                                    </figure>
-                                    <div class="r-text">
-                                        <p class="r-maintext">거북이 공원</p>
-                                        <p class="basetext">육지 거북이 ,반수생 거북이를 키우시거나 관심있으신분들 많…</p>
-                                        <p>맴버 839· 리더 거북이 집사 </p>
-                                        <a href="#" role="button">
-                                            <p class="recommend">육지 거북이</p>
-                                            <p>밴드 더보기</p>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="r-contents">
-                                    <figure class="r-container-img">
-                                        <img src="../day15/img/kbs시사.jpg" alt="">
-                                    </figure>
-                                    <div class="r-text">
-                                        <p class="r-maintext">공식 밴드 KBS 시사클럽</p>
-                                        <p class="basetext">당신의 하루, 대한민국의 오늘 KBS 뉴스​</p>
-                                        <p>맴버 45,662· 리더 KBS 시사클럽 </p>
-                                        <a href="#" role="button">
-                                            <p class="recommend">뉴스</p>
-                                            <p>밴드 더보기</p>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="r-contents-area">
-                                <div class="r-contents">
-                                    <figure class="r-container-img">
-                                        <img src="../day15/img/nc.jpg" alt="">
-                                    </figure>
-                                    <div class="r-text">
-                                        <p class="r-maintext">NC 다이노스 팬밴드</p>
-                                        <p class="basetext">9번째 심장 NC다이노스 팬밴드에 오신것을 환영합니다~~^^ …</p>
-                                        <p>맴버 11,648· 리더 이다겸/71/창원 </p>
-                                        <a href="#" role="button">
-                                            <p class="recommend">NC 다이노스</p>
-                                            <p>밴드 더보기</p>
-                                        </a>
-                                    </div>
-                                </div>
-                            <div class="r-contents">
-                                <figure class="r-container-img">
-                                  <img src="../day15/img/크로키.jpg" alt="">
-                                </figure>
-                                <div class="r-text">
-                                    <p class="r-maintext">매일 크로키하기</p>
-                                    <p class="basetext">매일 크로키</p>
-                                    <p>맴버 551· 리더 먕 </p>
-                                    <a href="#" role="button">
-                                        <p class="recommend">크로키 그림</p>
-                                        <p>밴드 더보기</p>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="r-contents">
-                                <figure class="r-container-img">
-                                  <img src="../day15/img/영탁.jpg" alt="">
-                                </figure>
-                                <div class="r-text">
-                                    <p class="r-maintext">❤가수영탁 팬밴드❤</p>
-                                    <p class="basetext">미스터 트롯(선) 출신 영탁가수의 밴드 입니다 2007년 "사랑…</p>
-                                    <p>맴버 2,725· 리더 리더 유재태(부산) </p>
-                                    <a href="#" role="button">
-                                        <p class="recommend">영탁</p>
-                                        <p>밴드 더보기</p>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="r-contents">
-                                <figure class="r-container-img">
-                                  <img src="../day15/img/산행.jpg" alt="">
-                                </figure>
-                                <div class="r-text">
-                                    <p class="r-maintext">나홀로 산행기</p>
-                                    <p class="basetext">여기서 일창으로 작업하시거나...그런분들 가차없이 강퇴조치…</p>
-                                    <p>맴버 9,659· 리더 창민-의정부-77 </p>
-                                    <a href="#" role="button">
-                                        <p class="recommend">산행</p>
-                                        <p>밴드 더보기</p>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="r-contents">
-                                <figure class="r-container-img">
-                                  <img src="../day15/img/박효신.jpg" alt="">
-                                </figure>
-                                <div class="r-text">
-                                    <p class="r-maintext">박효신 팬밴드</p>
-                                    <p class="basetext">가수 박효신의 팬밴드입니다. 대한민국 최고의 가창력과 영혼…</p>
-                                    <p>맴버 1,086· 리더 효신짱신#운영자리더 </p>
-                                    <a href="#" role="button">
-                                        <p class="recommend">팬밴드</p>
-                                        <p>밴드 더보기</p>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+            </section>
             <section class="app-section">
                 <div class="app-area">
                     <div class="app-downlod">
@@ -291,21 +314,19 @@
         <div class="f-container">
             <div class="f-contents">
                 <div class="f-menu">
-                    <li>
-                        <a href="">블로그</a>
-                        <a href="">공지사항</a>
-                        <a href="">스티커제안</a>
-                        <a href="">광고</a>
-                        <a href="">이용약관</a>
-                        <a href="">개인정보처리방침</a>
-                        <a href="">쿠키설정</a>
-                        <a href="">CCPA 개인 정보 관리</a>
-                        <a href="">청소년 보호를 위한 노력</a>
-                        <a href="">활동정책</a>
-                        <a href="">권리침해 신고안내</a>
-                        <a href="">개발자</a>
-                        <a href="">도움말</a>
-                    </li>
+                    <a href="" class="f-menu-list">블로그</a>
+                    <a href="" class="f-menu-list">공지사항</a>
+                    <a href="" class="f-menu-list">스티커제안</a>
+                    <a href="" class="f-menu-list">광고</a>
+                    <a href="" class="f-menu-list">이용약관</a>
+                    <a href="" class="f-menu-list">개인정보처리방침</a>
+                    <a href="" class="f-menu-list">쿠키설정</a>
+                    <a href="" class="f-menu-list">CCPA 개인 정보 관리</a>
+                    <a href="" class="f-menu-list">청소년 보호를 위한 노력</a>
+                    <a href="" class="f-menu-list">활동정책</a>
+                    <a href="" class="f-menu-list">권리침해 신고안내</a>
+                    <a href="" class="f-menu-list">개발자</a>
+                    <a href="" class="f-menu-list">도움말</a>
                 </div>
                 <p>BAND &copy; 2024</p>
             </div>
